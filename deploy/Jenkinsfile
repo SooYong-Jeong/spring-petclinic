@@ -90,15 +90,15 @@ pipeline {
                 //echo "create application"
                 //sh 'aws deploy create-application --application-name project04'
                
-                echo "create Codedeploy group"   
-                sh '''
-                    aws deploy create-deployment-group \
-                    --application-name project04 \
-                    --auto-scaling-groups project04-autoscaling-group \
-                    --deployment-group-name project04-deploy \
-                    --deployment-config-name CodeDeployDefault.OneAtATime \
-                    --service-role-arn arn:aws:iam::257307634175:role/project04-service-code-deploy-role
-                    '''
+//                 echo "create Codedeploy group"   
+//                 sh '''
+//                     aws deploy create-deployment-group \
+//                     --application-name project04 \
+//                     --auto-scaling-groups project04-autoscaling-group \
+//                     --deployment-group-name project04-deploy \
+//                     --deployment-config-name CodeDeployDefault.OneAtATime \
+//                     --service-role-arn arn:aws:iam::257307634175:role/project04-service-code-deploy-role
+//                     '''
                 echo "Codedeploy Workload"   
                 sh '''
                     aws deploy create-deployment --application-name project04 \
